@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document Classification Prediction</title>
+  </head>
+
+<body>
+ <div class="login">
+	<h1>Document Classification Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict_expenses')}}"method="post">
+          <textarea name="message" placeholder="Document Content" rows="6" cols="50" required="required"></textarea>
+	    <button type="submit" class="btn btn-primary btn-block btn-large">Predict Type of Document</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
