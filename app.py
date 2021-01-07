@@ -22,8 +22,8 @@ from sklearn import svm
 
 
 app = Flask(__name__)
-model = joblib.load('C:\\Users\\INTEL\\Desktop\\Deployment\\svm_model.pkl')
-vectorizer=joblib.load('C:\\Users\\INTEL\\Desktop\\Deployment\\SVM_vectorizer.pkl')
+model = joblib.load('svm_model.pkl')
+vectorizer=joblib.load('SVM_vectorizer.pkl')
 
 
 @app.route('/')
