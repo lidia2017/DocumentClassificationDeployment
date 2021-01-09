@@ -3,20 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <title>Document Classification Prediction</title>
+  <style>
+  body {
+	background-image: url("https://www.landlordzone.co.uk/wp-content/uploads/2017/08/Documents.jpg");
+        background-repeat:no-repeat;
+        background-size:cover;
+      } 
+  .button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+  .form{
+  text-align:center;
+  font-size: 30px;
+}
+
+  </style>
   </head>
 
 <body>
- <div class="login">
+ <center><div class=form>
 	<h1>Document Classification Prediction</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict_expenses')}}"method="post">
+    <form action="{{ url_for('predict')}}"method="post">
           <textarea name="message" placeholder="Document Content" rows="6" cols="50" required="required"></textarea>
-	    <button type="submit" class="btn btn-primary btn-block btn-large">Predict Type of Document</button>
+	    <div><button type="submit" class="button">Predict Type of Document</button></div>
     </form>
 
    <br>
-   <br>
+   <br><font color="red"><b>
    {{ prediction_text }}
-
- </div>
+  <b></font>
+ </div></center>
