@@ -5,7 +5,7 @@
   <title>Document Classification Prediction</title>
   <style>
   body {
-	background-image: url("https://www.landlordzone.co.uk/wp-content/uploads/2017/08/Documents.jpg");
+	background-image: url("https://textuts.com/images/tutorials/sparkles/Background.jpg");
         background-repeat:no-repeat;
         background-size:cover;
       } 
@@ -30,17 +30,16 @@
   </head>
 
 <body>
- <center><div class=form>
+ <center><div class=form><font color="white">
 	<h1>Document Classification Prediction</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-          <textarea name="message" placeholder="Document Content" rows="6" cols="50" required="required"></textarea>
-	    <div><button type="submit" class="button">Predict Type of Document</button></div>
+     <textarea name="message" placeholder="Document Content" rows="10" cols="100" style="border:groove 6px orange;" required="required"></textarea>
+      <br><div><button type="submit" class="button">Predict Type of Document</button></div>
     </form>
-
    <br>
-   <br><font color="red"><b>
+   <br><b>
    {{ prediction_text }}
   <b></font>
  </div></center>
